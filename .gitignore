@@ -42,6 +42,9 @@
 *.idb
 *.pdb
 
+# JetBrains
+.idea/*
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
