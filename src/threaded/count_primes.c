@@ -19,11 +19,11 @@ void *calc_primes(void *thread_input_data)
     while (loop_index <= tdata->upper_bound) {
         int ndivisible = 0;
 
-        pthread_mutex_lock(&lock);  // Lock mutex
+        pthread_mutex_lock(&lock);
         long i = loop_index++;
-        pthread_mutex_unlock(&lock);  // Unlock mutex
+        pthread_mutex_unlock(&lock);
 
-        for (long j = 1; j < i; j++) {
+        for (long j = 1; j <= i / 2; j++) {
             if ((i % j) == 0) {
                 ndivisible++;
                 if (ndivisible > 1) {
